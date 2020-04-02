@@ -1,0 +1,3 @@
+# Project exclude paths
+/example-hdfs/target/
+/example-mr-wordcount/target/
