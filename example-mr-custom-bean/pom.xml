@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>example-mr-wordcount</artifactId>
+    <artifactId>example-mr-custom-bean</artifactId>
 
     <build>
         <plugins>
@@ -29,7 +29,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.yaomalang.mapreduce.WordCount</mainClass>
+                            <mainClass>com.yaomalang.mapreduce.FlowBeanTest</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -45,4 +45,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>
