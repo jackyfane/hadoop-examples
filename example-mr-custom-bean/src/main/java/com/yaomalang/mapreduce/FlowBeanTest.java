@@ -13,7 +13,7 @@ public class FlowBeanTest extends Configured implements Tool {
 
     public static void main(String[] args) throws Exception {
         if (args.length != 2) {
-            System.out.println();
+            System.out.println("Args must be 2 length");
             System.exit(-1);
             return;
         }
