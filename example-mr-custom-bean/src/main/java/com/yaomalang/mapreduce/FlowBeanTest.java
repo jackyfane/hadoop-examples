@@ -12,16 +12,16 @@ import org.apache.hadoop.util.ToolRunner;
 public class FlowBeanTest extends Configured implements Tool {
 
     public static void main(String[] args) throws Exception {
-        if (args.length != 2) {
-            System.out.println("Args must be 2 length");
-            System.exit(-1);
-            return;
-        }
-        ToolRunner.run(new FlowBeanTest(), args);
+        int result = ToolRunner.run(new FlowBeanTest(), args);
+        System.exit(result);
     }
 
     @Override
     public int run(String[] args) throws Exception {
+        if (args.length != 2) {
+            System.out.println("Args must be 2 length");
+            return 1;
+        }
 
         Job job = Job.getInstance(getConf());
         job.setJarByClass(getClass());
