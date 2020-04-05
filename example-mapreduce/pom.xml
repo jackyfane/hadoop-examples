@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>example-mr-custom-bean</artifactId>
+    <artifactId>example-mapreduce</artifactId>
 
     <build>
         <plugins>
@@ -29,7 +29,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.yaomalang.mapreduce.FlowBeanTest</mainClass>
+                            <mainClass>com.yaomalang.mr.valuebean.FlowBeanTest</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

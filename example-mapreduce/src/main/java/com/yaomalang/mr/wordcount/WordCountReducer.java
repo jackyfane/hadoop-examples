@@ -1,4 +1,4 @@
-package com.yaomalang.mapreduce;
+package com.yaomalang.mr.wordcount;
 
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;

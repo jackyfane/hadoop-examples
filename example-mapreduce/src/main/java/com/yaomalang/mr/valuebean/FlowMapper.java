@@ -1,4 +1,4 @@
-package com.yaomalang.mapreduce;
+package com.yaomalang.mr.valuebean;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
