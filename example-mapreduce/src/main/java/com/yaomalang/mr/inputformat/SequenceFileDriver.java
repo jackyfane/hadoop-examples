@@ -17,7 +17,7 @@ import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
 /**
- * NLineInputFormat是将输入的文件按每N行划分为一片
+ * 自定义FileInputFormat与SequenceFileOutputFormat的实例
  */
 public class SequenceFileDriver extends Configured implements Tool {
     public static void main(String[] args) throws Exception {
