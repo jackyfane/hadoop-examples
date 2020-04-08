@@ -6,6 +6,9 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
+/**
+ * Serialize Demo
+ */
 public class FlowBean implements Writable {
 
     private Long upFlow;
