@@ -16,6 +16,11 @@ import org.apache.hadoop.util.ToolRunner;
 
 /**
  * KeyValueTextInputFormat Demo
+ * KeyValueTextInputFormat的格式是将一行数据进行分割为两列的一维数组，其中第一列将作为Map的key，第二列为Map的value
+ * 默认的分割是制表符：\t，可以通过Configuration设置KeyValueLineRecordReader.KEY_VALUE_SEPERATOR分隔符，
+ * 如空格符的设置，config.set(KeyValueLineRecordReader.KEY_VALUE_SEPERATOR, " ")，
+ * 同时，需要在Job中设置输入格式class为KeyValueTextFileFormat：
+ * job.setInputFormatClass(KeyValueTextInputFormat.class);
  */
 public class KVTextDriver extends Configured implements Tool {
 
