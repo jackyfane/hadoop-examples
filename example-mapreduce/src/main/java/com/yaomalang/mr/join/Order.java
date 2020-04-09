@@ -1,12 +1,13 @@
 package com.yaomalang.mr.join;
 
+import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.io.WritableComparable;
 
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-public class Order implements WritableComparable<Order> {
+public class Order implements Writable {
 
     private String orderId;
     private String productId;
@@ -23,21 +24,21 @@ public class Order implements WritableComparable<Order> {
         this.amount = amount;
     }
 
-    @Override
-    public int compareTo(Order order) {
-        if (orderId.hashCode() > order.getOrderId().hashCode()) {
-            return 1;
-        } else if (orderId.hashCode() < order.getOrderId().hashCode()) {
-            return -1;
-        } else {
-            if (this.amount > order.getAmount()) {
-                return 1;
-            } else if (this.amount < order.getAmount()) {
-                return -1;
-            }
-        }
-        return 0;
-    }
+//    @Override
+//    public int compareTo(Order order) {
+//        if (orderId.hashCode() > order.getOrderId().hashCode()) {
+//            return 1;
+//        } else if (orderId.hashCode() < order.getOrderId().hashCode()) {
+//            return -1;
+//        } else {
+//            if (this.amount > order.getAmount()) {
+//                return 1;
+//            } else if (this.amount < order.getAmount()) {
+//                return -1;
+//            }
+//        }
+//        return 0;
+//    }
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
