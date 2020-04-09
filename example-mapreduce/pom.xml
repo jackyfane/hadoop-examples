@@ -29,7 +29,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.yaomalang.mr.valuebean.FlowBeanTest</mainClass>
+                            <mainClass>com.yaomalang.mr.sort.FlowBeanDriver</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

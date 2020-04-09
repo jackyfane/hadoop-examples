@@ -1,0 +1,1 @@
+/tmp/hadoop-yaomalang/mapred/local/1586403944809/product.txt
