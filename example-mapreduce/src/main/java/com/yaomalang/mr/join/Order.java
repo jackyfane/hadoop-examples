@@ -13,32 +13,18 @@ public class Order implements Writable {
     private String productId;
     private String productName;
     private int amount;
+    private String label;
 
     public Order() {
     }
 
-    public Order(String orderId, String productId, String productName, int amount) {
+    public Order(String orderId, String productId, String productName, int amount, String label) {
         this.orderId = orderId;
         this.productId = productId;
         this.productName = productName;
         this.amount = amount;
+        this.label = label;
     }
-
-//    @Override
-//    public int compareTo(Order order) {
-//        if (orderId.hashCode() > order.getOrderId().hashCode()) {
-//            return 1;
-//        } else if (orderId.hashCode() < order.getOrderId().hashCode()) {
-//            return -1;
-//        } else {
-//            if (this.amount > order.getAmount()) {
-//                return 1;
-//            } else if (this.amount < order.getAmount()) {
-//                return -1;
-//            }
-//        }
-//        return 0;
-//    }
 
     @Override
     public void write(DataOutput dataOutput) throws IOException {
@@ -46,6 +32,7 @@ public class Order implements Writable {
         dataOutput.writeUTF(productId);
         dataOutput.writeUTF(productName);
         dataOutput.writeInt(amount);
+        dataOutput.writeUTF(label);
     }
 
     @Override
@@ -54,6 +41,7 @@ public class Order implements Writable {
         productId = dataInput.readUTF();
         productName = dataInput.readUTF();
         amount = dataInput.readInt();
+        label = dataInput.readUTF();
     }
 
     public String getOrderId() {
@@ -86,6 +74,14 @@ public class Order implements Writable {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
     }
 
     @Override

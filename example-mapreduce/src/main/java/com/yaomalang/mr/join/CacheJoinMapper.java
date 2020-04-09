@@ -37,7 +37,7 @@ public class CacheJoinMapper extends Mapper<LongWritable, Text, Order, NullWrita
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String[] fields = value.toString().split("\t");
-        Order order = new Order(fields[0], fields[1], prodMap.get(fields[1]), Integer.parseInt(fields[2]));
+        Order order = new Order(fields[0], fields[1], prodMap.get(fields[1]), Integer.parseInt(fields[2]), "");
 
         context.write(order, NullWritable.get());
     }
