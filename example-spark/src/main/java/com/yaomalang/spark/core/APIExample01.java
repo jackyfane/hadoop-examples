@@ -10,6 +10,9 @@ import org.junit.Test;
 
 import java.util.*;
 
+/**
+ * example for single value
+ */
 public class APIExample01 {
 
     private JavaSparkContext sc;
