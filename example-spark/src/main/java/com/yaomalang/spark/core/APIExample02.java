@@ -24,7 +24,7 @@ public class APIExample02 {
     }
 
     @After
-    public void clean() {
+    public void stop() {
         System.out.println("==================关闭SparkContext=================");
         sc.stop();
     }

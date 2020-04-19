@@ -20,7 +20,7 @@
 # This file is sourced when running various Spark programs.
 # Copy it as spark-env.sh and edit that to configure Spark for your site.
 
-JAVA_HOME=/opt/modules/jdk1.8.0_241
+export JAVA_HOME=/opt/modules/jdk1.8.0_241
 
 # Options read when launching programs locally with
 # ./bin/run-example or ./bin/spark-submit
@@ -81,3 +81,4 @@ SPARK_HISTORY_OPTS="-Dspark.history.ui.port=18080 -Dspark.history.retainedApplic
 # SPARK Yarn
 HADOOP_CONF_DIR=/opt/modules/hadoop-2.7.7/etc/Hadoop
 YARN_CONF_DIR=/opt/modules/hadoop-2.7.7/etc/Hadoop
+

@@ -25,6 +25,20 @@
     <name>yarn.resourcemanager.hostname</name>
     <value>node003</value>
   </property>
+
+  <property>
+    <name>yarn.resourcemanager.scheduler.address</name>
+    <value>node003:8030</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.resource-tracker.address</name>
+    <value>node003:8031</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.address</name>
+    <value>node003:8032</value>
+  </property>
+
   <!-- 日志聚集功能使能 -->
   <property>
     <name>yarn.log-aggregation-enable</name>
@@ -35,20 +49,6 @@
     <name>yarn.log-aggregation.retain-seconds</name>
     <value>604800</value>
   </property>
-
-  <property>
-    <name>yarn.resourcemanager.address</name>
-    <value>node003:8032</value>
-  </property>
-  <property>
-    <name>yarn.resourcemanager.scheduler.address</name>
-    <value>node003:8030</value>
-  </property>
-  <property>
-    <name>yarn.resourcemanager.resource-tracker.address</name>
-    <value>node003:8031</value>
-  </property>
-
   <!-- 是否启动一个线程检查每个任务正使用的物理内存量，如果任务超出分配值，
 则直接将其杀掉，默认是true -->
   <property>
