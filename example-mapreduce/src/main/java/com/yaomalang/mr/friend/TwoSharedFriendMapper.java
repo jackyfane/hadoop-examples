@@ -1,11 +1,11 @@
 package com.yaomalang.mr.friend;
 
-import java.io.IOException;
-import java.util.Arrays;
-
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
+
+import java.io.IOException;
+import java.util.Arrays;
 
 public class TwoSharedFriendMapper extends Mapper<LongWritable, Text, Text, Text> {
 

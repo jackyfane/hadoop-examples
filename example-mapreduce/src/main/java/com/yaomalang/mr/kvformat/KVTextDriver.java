@@ -1,6 +1,5 @@
 package com.yaomalang.mr.kvformat;
 
-import com.yaomalang.mr.wordcount.WordCountDriver;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.Path;

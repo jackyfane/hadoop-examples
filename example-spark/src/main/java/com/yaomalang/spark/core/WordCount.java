@@ -1,11 +1,9 @@
 package com.yaomalang.spark.core;
 
 import org.apache.spark.SparkConf;
-import org.apache.spark.SparkContext;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.deploy.SparkSubmit;
 import scala.Tuple2;
 
 import java.util.Arrays;
