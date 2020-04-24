@@ -136,10 +136,10 @@ public class TestHBaseAPI {
         List<Cell> cells = result.listCells();
         if (cells == null) return;
         for (Cell cell : cells) {
-            String line = "RowKey:" + new String(CellUtil.cloneRow(cell), "UTF-8")
-                    + "\tFamily:" + new String(CellUtil.cloneFamily(cell), "UTF-8")
-                    + "\tColumn:" + new String(CellUtil.cloneQualifier(cell), "UTF-8")
-                    + "\tValue:" + new String(CellUtil.cloneValue(cell), "UTF-8");
+            String line = "RowKey:" + Bytes.toString(CellUtil.cloneRow(cell))
+                    + "\tFamily:" + Bytes.toString(CellUtil.cloneFamily(cell))
+                    + "\tColumn:" + Bytes.toString(CellUtil.cloneQualifier(cell))
+                    + "\tValue:" + Bytes.toString(CellUtil.cloneValue(cell));
             System.out.println(line);
         }
     }
