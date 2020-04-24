@@ -41,6 +41,12 @@ public class TestHBaseAPI {
         close(connection, admin);
     }
 
+    /**
+     *
+     * @param tableName
+     * @param cols
+     * @throws IOException
+     */
     public static void createTable(String tableName, String... cols) throws IOException {
         if (tableExists(tableName)) {
             System.out.println("tableName = " + tableName + " is exists.");
@@ -84,6 +90,15 @@ public class TestHBaseAPI {
         putData("student", rowKey, "score", "python", "80");
     }
 
+    /**
+     *
+     * @param tableName
+     * @param rowKey
+     * @param cf
+     * @param col
+     * @param value
+     * @throws IOException
+     */
     public static void putData(String tableName, String rowKey, String cf, String col, String value) throws IOException {
         Table table = connection.getTable(TableName.valueOf(tableName));
 
@@ -132,6 +147,11 @@ public class TestHBaseAPI {
         showResult(result);
     }
 
+    /**
+     *
+     * @param result
+     * @throws UnsupportedEncodingException
+     */
     private static void showResult(Result result) throws UnsupportedEncodingException {
         List<Cell> cells = result.listCells();
         if (cells == null) return;
