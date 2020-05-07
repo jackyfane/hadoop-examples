@@ -13,6 +13,7 @@
         <module>example-mapreduce</module>
         <module>example-zookeeper</module>
         <module>example-spark</module>
+        <module>example-hbase</module>
     </modules>
 
     <properties>

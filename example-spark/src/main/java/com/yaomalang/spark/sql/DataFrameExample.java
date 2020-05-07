@@ -25,7 +25,7 @@ public class DataFrameExample {
         sc = new SparkContext(conf);
         spark = new SparkSession(sc);
 //        spark = SparkSession.builder().appName("").master("local[*]").getOrCreate();
-        spark.implicits();
+//        spark.implicits();
     }
 
     @After

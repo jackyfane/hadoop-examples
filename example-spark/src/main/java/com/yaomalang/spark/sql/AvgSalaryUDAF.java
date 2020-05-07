@@ -3,6 +3,7 @@ package com.yaomalang.spark.sql;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.expressions.MutableAggregationBuffer;
 import org.apache.spark.sql.expressions.UserDefinedAggregateFunction;
+import org.apache.spark.sql.*;
 import org.apache.spark.sql.types.*;
 
 public class AvgSalaryUDAF extends UserDefinedAggregateFunction {
@@ -46,9 +47,9 @@ public class AvgSalaryUDAF extends UserDefinedAggregateFunction {
     }
 
     @Override
-    public void merge(MutableAggregationBuffer buffer, Row row) {
-        buffer.update(0, buffer.getLong(0) + row.getLong(0));
-        buffer.update(1, buffer.getInt(1) + row.getInt(1));
+    public void merge(MutableAggregationBuffer buffer1, Row buffer) {
+        buffer1.update(0, buffer.getLong(0) + buffer.getLong(0));
+        buffer1.update(1, buffer.getInt(1) + buffer.getInt(1));
     }
 
     @Override
